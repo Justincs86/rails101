@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  
   before_action :authenticate_user! , only: [:new, :create]
   def create
     @group = Group.new(group_params)
