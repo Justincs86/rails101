@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  
+
   before_action :authenticate_user! , only: [:new, :create]
   def create
     @group = Group.new(group_params)
@@ -25,16 +25,6 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-  end
-
-  def create
-    @group = Group.new(group_params)
-
-    if @group.save
-      redirect_to groups_path
-    else
-      render :new
-    end
   end
 
   def update
