@@ -14,9 +14,9 @@ class GroupsController < ApplicationController
       render :new
     end
   end
+
   def index
     @groups = Group.all
-
   end
 
   def show
